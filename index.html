@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <h1>calculator</h1>
+    <input type="text" id="display" readonly placeholder="0">
+    <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button onclick="deleteLast()">⌫</button>
+        <button class="operator" onclick="appendValue('/')">÷</button>
+        <button class="operator" onclick="appendValue('*')">×</button><br>
+
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('-')">-</button><br>
+        
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="operator" onclick="appendValue('+')">+</button><br>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="appendValue('.')">.</button><br></br>
+
+        <button onclick="appendValue('0')">0</button>
+        <button class="equal" onclick="calculate()">=</button>
+    </div>
+</div>
+<script>
+    const display = document.getElementById('display');
+
+    function appendValue(value) {
+        // Prevent adding multiple operators in a row
+        const lastChar = display.value.slice(-1);
+        const operators = ['+', '-', '*', '/', '.'];
+        
+        if (operators.includes(value) && operators.includes(lastChar)) {
+            return; 
+        }
+        
+        display.value += value;
+    }
+
+    function clearDisplay() {
+        display.value = '';
+    }
+
+    function deleteLast() {
+        display.value = display.value.slice(0, -1);
+    }
+
+    function calculate() {
+        try {
+            // Function() evaluates the string securely without using standard eval()
+            if (display.value) {
+                display.value = Function('"use strict";return (' + display.value + ')')();
+            }
+        } catch (error) {
+            display.value = 'Error';
+        }
+    }
+</script>
+
+</body>
+</html>

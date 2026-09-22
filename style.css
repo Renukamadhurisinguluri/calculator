@@ -1,0 +1,111 @@
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+background-color: bisque;
+}
+div{
+    text-align:center;
+    padding: 2%;
+}
+button{
+    background-color: rgba(233, 236, 234, 0.838);
+    color: rgb(1, 1, 10);
+    text-align: center;
+    box-sizing: border-box;
+    padding:5%;
+}
+input {
+padding:1%;
+background-color: rgb(248, 243, 245);
+color: rgb(223, 16, 154);
+
+}
+button:hover{
+    background-color: hsl(194, 76%, 38%);
+    color: rgb(235, 235, 241);
+}
+input:hover{
+    background-color: rgb(158, 187, 242);
+}
+.calculator{
+    background-color: rgb(146, 247, 222);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 320px;
+    box-sizing: border-box;
+}
+div .clear{
+    background-color: rgba(244, 102, 63, 0.989);
+    color: black;
+}
+h1{
+    color: rgb(19, 19, 19);
+    font-family: Arial, Helvetica, sans-serif;
+}
+ /*The calculator box 
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 15px;
+}
+
+/* The screen 
+.display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    background-color: white;
+    font-size: 30px;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Container for buttons 
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* All calculator buttons 
+button {
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+}
+
+/* When you move the mouse over a button 
+button:hover {
+    background-color: #666;
+}
+
+/* Operator buttons 
+.operator {
+    background-color: orange;
+}
+
+.operator:hover {
+    background-color: darkorange;
+}
+input {
+padding:1%;
+background-color: rgb(248, 243, 245);
+color: rgb(223, 16, 154);
+
+}*/
